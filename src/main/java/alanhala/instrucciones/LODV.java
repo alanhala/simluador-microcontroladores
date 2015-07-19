@@ -1,4 +1,6 @@
-package alanhala;
+package alanhala.instrucciones;
+
+import alanhala.Microcontrolador;
 
 public class LODV implements Instruccion {
 
@@ -9,6 +11,9 @@ public class LODV implements Instruccion {
 	}
 
 	public void ejecutar(Microcontrolador micro) {
+		if (value > 255){
+			throw new RuntimeException("El valor no puede ser mayor a 255");
+		}
 		micro.setA(value);
 	}
 
