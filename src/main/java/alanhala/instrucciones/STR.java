@@ -1,4 +1,6 @@
-package alanhala;
+package alanhala.instrucciones;
+
+import alanhala.Microcontrolador;
 
 public class STR implements Instruccion {
 	
